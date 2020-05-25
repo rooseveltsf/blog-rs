@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
+import { FaArrowLeft } from "react-icons/fa"
 
-import { StateContext } from "../../context/StateContext"
+import { StateContext } from "../../../context/StateContext"
 
 import SwitchButton from "../../SwitchButton"
 import { Container, LinkHeader, LinkBack } from "./styles"

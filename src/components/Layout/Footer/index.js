@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { FaTwitter, FaInstagram, FaGithub } from "react-icons/fa"
 
-import { StateContext } from "../../context/StateContext"
+import { StateContext } from "../../../context/StateContext"
 import { Container } from "./styles"
 
 function Footer() {

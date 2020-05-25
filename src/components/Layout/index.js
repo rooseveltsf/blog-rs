@@ -2,12 +2,12 @@ import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { StateContext } from "../../context/StateContext"
 
-import SEO from "../SEO"
+// import SEO from "../SEO"
 import GlobalStyle from "../../styles/global"
 import { motion, AnimatePresence } from "framer-motion"
 import { Container } from "./styles"
-import Header from "../Header"
-import Footer from "../Footer"
+import Header from "./Header"
+import Footer from "./Footer"
 
 const duration = 0.5
 const variants = {
@@ -34,7 +34,7 @@ const Layout = ({ children, template, seo }) => {
   return (
     <>
       <Container dark={dark}>
-        <SEO title={seo} />
+        {/* <SEO title={seo} /> */}
         <Header template={template} />
         <AnimatePresence>
           <motion.main
