@@ -3,7 +3,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 
 import { StateContext } from "../../context/StateContext"
 
-import SwitchButton from "../SwitchButton"
+import SwitchButton from "../../SwitchButton"
 import { Container, LinkHeader, LinkBack } from "./styles"
 
 const Header = ({ template }) => {
