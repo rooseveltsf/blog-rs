@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { StateContext } from "../../context/StateContext"
 
-// import SEO from "../SEO"
+import SEO from "../Seo"
 import GlobalStyle from "../../styles/global"
 import { motion, AnimatePresence } from "framer-motion"
 import { Container } from "./styles"
