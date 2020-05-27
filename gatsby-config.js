@@ -23,6 +23,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/content`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         displayName: process.env.NODE_ENV === "production",
