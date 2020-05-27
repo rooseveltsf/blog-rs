@@ -2,8 +2,7 @@ import React, { useContext } from "react"
 
 import { StateContext } from "../../context/StateContext"
 import Info from "../../components/Info"
-import Layout from "../../components/layout"
-import SEO from "../../components/SEO"
+import Layout from "../../components/Layout"
 import ListTechs from "../../components/ListTechs"
 
 import { Container } from "./styles"
