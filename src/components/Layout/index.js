@@ -34,7 +34,7 @@ const Layout = ({ children, template, seo }) => {
   return (
     <>
       <Container dark={dark}>
-        {/* <SEO title={seo} /> */}
+        <SEO title={seo} />
         <Header template={template} />
         <AnimatePresence>
           <motion.main
