@@ -1,31 +1,32 @@
-import React, { useContext } from "react";
-import Img from "gatsby-image";
-import { useStaticQuery, graphql } from "gatsby";
+import React, { useContext } from "react"
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 
-import { StateContext } from "../context/StateContext";
+import { StateContext } from "../context/StateContext"
 
-import SEO from "../components/Seo";
-import SwitchButton from "../components/SwitchButton";
+import SEO from "../components/Seo"
+import SwitchButton from "../components/SwitchButton"
 
-import GlobalStyle from "../styles/global";
+import GlobalStyle from "../styles/global"
 import {
   Container,
+  Logo,
   ContainerHome,
   ContainerData,
   ContainerButtons,
   PageProjects,
   PageAbout,
-} from "./styles";
+} from "./styles"
 
 const variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
-};
+}
 
 const IndexPage = () => {
-  const { dark, toggleDark } = useContext(StateContext);
+  const { dark, toggleDark } = useContext(StateContext)
 
   const data = useStaticQuery(graphql`
     query {
@@ -44,7 +45,7 @@ const IndexPage = () => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <Container dark={dark}>
@@ -52,14 +53,12 @@ const IndexPage = () => {
       <ContainerHome>
         <SwitchButton check={dark} on={toggleDark} />
         <ContainerData>
-          <Img
-            style={{
-              width: 301,
-              heigth: 121,
-            }}
-            fluid={dark
-              ? data.dark.childImageSharp.fluid
-              : data.light.childImageSharp.fluid}
+          <Logo
+            fluid={
+              dark
+                ? data.dark.childImageSharp.fluid
+                : data.light.childImageSharp.fluid
+            }
           />
 
           <motion.p initial="hidden" animate="visible" variants={variants}>
@@ -80,7 +79,7 @@ const IndexPage = () => {
       </ContainerButtons>
       <GlobalStyle />
     </Container>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
