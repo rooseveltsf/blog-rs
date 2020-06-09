@@ -39,7 +39,8 @@
     "react-slick": "^0.26.1",
     "react-switch": "^5.0.1",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
     "prettier": "2.0.5"
