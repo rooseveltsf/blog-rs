@@ -11,7 +11,6 @@ const Header = ({ template }) => {
   const [width] = useState(window.innerWidth);
   const theme = useContext(StateContext);
 
-  console.log(`${width}px`, defaultBreakpoints.small);
   return (
     <Container dark={theme.dark}>
       {template
