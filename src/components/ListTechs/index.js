@@ -1,12 +1,12 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import { Container, SliderTech } from "./styles"
-import Item from "./Item"
+import { Container, SliderTech } from "./styles";
+import Item from "./Item";
 
 const settings = {
   dots: true,
@@ -15,7 +15,7 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-}
+};
 
 function ListTechs({ dark }) {
   const data = useStaticQuery(graphql`
@@ -49,7 +49,7 @@ function ListTechs({ dark }) {
         }
       }
     }
-  `)
+  `);
 
   const techs = [
     {
@@ -82,24 +82,23 @@ function ListTechs({ dark }) {
       description:
         "Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto aleatório. Tem raízes numa peça de literatura clássica em Latim, de 45 AC, tornando-o com mais de 2000 anos. simplesmente texto aleatório.",
     },
-  ]
+  ];
 
   return (
     <Container>
       <h2>Um pouco sobre as tecnologias trabalhadas</h2>
       <SliderTech
-        fade={true}
         className="slider-css"
         nextArrow={<FaArrowRight size={24} color={dark ? "#eee" : "#575656"} />}
         prevArrow={<FaArrowLeft size={24} color={dark ? "#eee" : "#575656"} />}
         {...settings}
       >
-        {techs.map(tech => (
+        {techs.map((tech) => (
           <Item dark={dark} data={tech} key={tech.name} />
         ))}
       </SliderTech>
     </Container>
-  )
+  );
 }
 
-export default ListTechs
+export default ListTechs;

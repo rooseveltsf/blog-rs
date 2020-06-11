@@ -59,7 +59,7 @@ export const ContainerData = styled.div`
     ${media.lessThan("small")`
     font-size: 20px;
     line-height: 26px;
-    text-align: justify;
+    /* text-align: justify; */
   `}
   }
 `;

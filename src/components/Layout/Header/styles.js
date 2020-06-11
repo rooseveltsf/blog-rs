@@ -1,5 +1,6 @@
-import styled from "styled-components"
-import { Link } from "gatsby"
+import styled from "styled-components";
+import media from "styled-media-query";
+import { Link } from "gatsby";
 
 export const Container = styled.header`
   /* grid-area: cabecalho; */
@@ -8,6 +9,7 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 20px;
 
   nav ul {
     display: flex;
@@ -17,7 +19,7 @@ export const Container = styled.header`
       padding: 0;
     }
   }
-`
+`;
 
 export const LinkHeader = styled(Link).attrs({
   activeClassName: "active",
@@ -37,7 +39,7 @@ export const LinkHeader = styled(Link).attrs({
     color: #ffcc57;
     border-bottom: 1px solid #ffcc57;
   }
-`
+`;
 
 export const LinkBack = styled(Link)`
   font-size: 16px;
@@ -67,4 +69,4 @@ export const LinkBack = styled(Link)`
   svg {
     margin-right: 5px;
   }
-`
+`;

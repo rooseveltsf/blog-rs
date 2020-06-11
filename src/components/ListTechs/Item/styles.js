@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import media from "styled-media-query";
 
 export const Tech = styled.div`
   display: flex;
@@ -7,11 +8,13 @@ export const Tech = styled.div`
 
   background: ${({ dark }) => (dark ? "#575656" : "#eee")};
   height: 230px;
-  /* border-radius: 4px; */
-
-  /* background: blue; */
-
   width: 100%;
+
+  ${media.lessThan("small")`
+    flex-direction: column;
+
+    height: 400px;
+  `}
 
   div {
     display: flex;
@@ -19,7 +22,11 @@ export const Tech = styled.div`
     justify-content: space-around;
     align-items: flex-start;
     width: 50%;
-    /* margin-left: 80px; */
+    
+
+    ${media.lessThan("small")`
+      width: 90%;
+    `}
 
     h3 {
       font-size: 36px;
@@ -31,4 +38,4 @@ export const Tech = styled.div`
       color: ${({ dark }) => (dark ? "#D1CCCC" : "#575656")};
     }
   }
-`
+`;

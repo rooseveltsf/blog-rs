@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import media from "styled-media-query";
 
 export const Container = styled.div`
   h2 {
@@ -7,28 +8,54 @@ export const Container = styled.div`
     text-align: center;
     font-size: 36px;
     font-weight: bold;
+
+    ${media.lessThan("small")`
+      margin-top: 54px;
+      margin-bottom: 54px;
+      font-size: 28px;
+    `}
   }
-`
+
+`;
 
 export const ListItems = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-`
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  `}
+`;
 
 export const Item = styled.div`
   display: flex;
   flex-direction: column;
   background: ${({ dark }) => (dark ? "#484848" : "#eee")};
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  
   /* padding: 20px; */
   border-radius: 4px;
   width: 45%;
   height: 400px;
-
   margin-bottom: 50px;
-`
+
+  ${media.lessThan("medium")`
+    margin-bottom: 30px;
+    width: 90%;
+    height: 400px;
+  `}
+
+  ${media.lessThan("small")`
+    height: 250px;
+  `}
+
+  &:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  }
+`;
 
 export const Info = styled.div`
   display: flex;
@@ -36,7 +63,12 @@ export const Info = styled.div`
   align-items: center;
   width: 100%;
   height: 30%;
-  /* background: red; */
+  
+  ${media.lessThan("small")`
+    strong {
+      font-size: 20px;
+    }
+  `}
 
   div {
     height: 100%;
@@ -46,7 +78,10 @@ export const Info = styled.div`
 
     strong {
       font-size: 40px;
-      /* display: block; */
+      
+      ${media.lessThan("small")`
+        font-size: 32px;
+      `}
     }
 
     p {
@@ -82,4 +117,4 @@ export const Info = styled.div`
       width: 100%;
     }
   }
-`
+`;

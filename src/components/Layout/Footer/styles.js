@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import media from "styled-media-query";
 
 export const Container = styled.footer`
   height: 85px;
@@ -8,6 +9,10 @@ export const Container = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  ${media.lessThan("small")`
+    flex-direction: column;
+  `}
 
   p {
     font-size: 16px;
@@ -37,4 +42,4 @@ export const Container = styled.footer`
       }
     }
   }
-`
+`;
