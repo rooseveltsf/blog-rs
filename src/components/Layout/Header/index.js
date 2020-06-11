@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import { defaultBreakpoints } from "styled-media-query";
 
@@ -8,7 +8,6 @@ import SwitchButton from "../../SwitchButton";
 import { Container, LinkHeader, LinkBack } from "./styles";
 
 const Header = ({ template }) => {
-  const [width] = useState(window.innerWidth);
   const theme = useContext(StateContext);
 
   return (
